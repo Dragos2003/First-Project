@@ -1,0 +1,899 @@
+{
+	"info": {
+		"_postman_id": "7bec9cfb-6ef9-496d-8438-a2eeecd0a292",
+		"name": "Newspaper Subscription API\"",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31506774"
+	},
+	"item": [
+		{
+			"name": "newspaper",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all newspapers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_newspaper",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Modified\",\n  \"frequency\": 0,\n  \"price\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "1253021437"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newspaper_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "1253021437"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newspaper",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "1253021437"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "issue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"release_date\": \"2015-11-01\",\n  \"released\": false,\n  \"editor_id\": 123\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id/issue",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id",
+						"issue"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "1386772003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all issues",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id/issue",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id",
+						"issue"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "1207869439"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "issue by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id/issue/:issue_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id",
+						"issue",
+						":issue_id"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "264479372"
+						},
+						{
+							"key": "issue_id",
+							"value": "746522583"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publish Issue",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"release_date\": \"2021-11-01\",\n  \"released\": false,\n  \"editor_id\": 13\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id/issue/:issue_id/release",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id",
+						"issue",
+						":issue_id",
+						"release"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "1281389531"
+						},
+						{
+							"key": "issue_id",
+							"value": "1662748190"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Issue set editor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"editor_id\": 1789692598\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id/issue/:issue_id/editor",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id",
+						"issue",
+						":issue_id",
+						"editor"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "1207869439"
+						},
+						{
+							"key": "issue_id",
+							"value": "1779917082"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/editor",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"editor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"Michael\",\n \"address\": \"Wall Street\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/editor",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"editor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editor by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/editor/:editor_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"editor",
+						":editor_id"
+					],
+					"variable": [
+						{
+							"key": "editor_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update editor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Modified\",\n    \"address\": \"Modified address\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/editor/:editor_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"editor",
+						":editor_id"
+					],
+					"variable": [
+						{
+							"key": "editor_id",
+							"value": "716134345"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/editor/:editor_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"editor",
+						":editor_id"
+					],
+					"variable": [
+						{
+							"key": "editor_id",
+							"value": "1789692598"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editor's issues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/editor/:editor_id/issues",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"editor",
+						":editor_id",
+						"issues"
+					],
+					"variable": [
+						{
+							"key": "editor_id",
+							"value": "1789692598"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all subscribers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/subscriber",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"subscriber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscriber",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Subscriber1\",\n    \"address\": \"ImcKrems\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/subscriber",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"subscriber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscriber by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/subscriber/:subscriber_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"subscriber",
+						":subscriber_id"
+					],
+					"variable": [
+						{
+							"key": "subscriber_id",
+							"value": "993497632"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_subscriber",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cont",
+						"value": "json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"subscriber_id\": 993497632,\n        \"name\": \"ModifiedSubscriber\",\n        \"address\": \"ImcKremsss\",\n        \"newspapers\": []\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/subscriber/:subscriber_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"subscriber",
+						":subscriber_id"
+					],
+					"variable": [
+						{
+							"key": "subscriber_id",
+							"value": "993497632"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscriber",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/subscriber/:subscriber_id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"subscriber",
+						":subscriber_id"
+					],
+					"variable": [
+						{
+							"key": "subscriber_id",
+							"value": "51739843"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subscribe with newspaper",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:7890/subscriber/:subscriber_id/subscribe",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"subscriber",
+						":subscriber_id",
+						"subscribe"
+					],
+					"variable": [
+						{
+							"key": "subscriber_id",
+							"value": "82714525"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deliver issue to subscriber",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"subscriber_id\": 2105363116\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id/issue/:issue_id/deliver",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id",
+						"issue",
+						":issue_id",
+						"deliver"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "683698741"
+						},
+						{
+							"key": "issue_id",
+							"value": "1077687328"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newspaper_stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/newspaper/:paper_id/stats",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"newspaper",
+						":paper_id",
+						"stats"
+					],
+					"variable": [
+						{
+							"key": "paper_id",
+							"value": "1947683841"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscriber_stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/subscriber/:subscriber_id/stats",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"subscriber",
+						":subscriber_id",
+						"stats"
+					],
+					"variable": [
+						{
+							"key": "subscriber_id",
+							"value": "1646958146"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subscriber_missing_issues",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:7890/subscriber/:subscriber_id/missingissues",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7890",
+					"path": [
+						"subscriber",
+						":subscriber_id",
+						"missingissues"
+					],
+					"variable": [
+						{
+							"key": "subscriber_id",
+							"value": "1642257029"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

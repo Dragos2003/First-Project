@@ -1,0 +1,38 @@
+from flask import jsonify
+from flask_restx import Namespace, Resource, fields
+from ..model.agency import Agency
+from ..model.newspaper import Newspaper
+
+
+
+
+subscriber_stats = Namespace('Subscriber Stats', description='Subscriber Stats')
+
+subscriber_stats_model = subscriber_stats.model('Subscriber Stats', {
+    'total_subscribers': fields.Integer,
+    'total_active_subscribers': fields.Integer,
+    'total_inactive_subscribers': fields.Integer,
+    'total_subscribers_by_agency': fields.List(fields.Nested({
+        'agency_id': fields.Integer,
+        'agency_name': fields.String,
+        'total_subscribers': fields.Integer,
+        'total_active_subscribers': fields.Integer,
+        'total_inactive_subscribers': fields.Integer
+    }))
+})
+
+
+@subscriber_stats.route('/<int:subscriber_id>/stats')
+class SubscriberStats(Resource):
+    def get(self, subscriber_id):
+        subscriber = Agency.get_instance().get_subscriber(subscriber_id)
+        if subscriber is None:
+            return jsonify({'message': 'Subscriber not found'}), 404
+       
+
+
+        
+
+
+
+        
